@@ -7,6 +7,14 @@ class Program
         Console.WriteLine("Enter strings separated by commas:");
         string input = Console.ReadLine()!;
         string[] arr = input.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+
+        string[] newArr = GetShortStrings(arr);
+
+        Console.WriteLine("New array of strings:");
+        foreach (var item in newArr)
+        {
+            Console.WriteLine(item);
+        }
     }
 
     static string[] GetShortStrings(string[] arr)
@@ -32,22 +40,11 @@ class Program
 
         return newArr;
     }
-
-    static void Show()
-    {
-        Console.WriteLine("Enter strings separated by commas:");
-        string input = Console.ReadLine()!;
-        string[] arr = input.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
-
-        string[] newArr = GetShortStrings(arr);
-
-        Console.WriteLine("New array of strings:");
-        foreach (var item in newArr)
-        {
-            Console.WriteLine(item);
-        }
-    }
 }
+
+
+
+
 
 
 
