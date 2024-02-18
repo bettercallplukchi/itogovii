@@ -4,10 +4,11 @@ class Program
 {
     static void Main()
     {
-        Console.WriteLine("Введите строки через запятую:");
+        Console.WriteLine("Enter strings separated by commas:");
         string input = Console.ReadLine()!;
         string[] arr = input.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
     }
+
     static string[] GetShortStrings(string[] arr)
     {
         int count = 0;
@@ -31,5 +32,22 @@ class Program
 
         return newArr;
     }
+
+    static void Show()
+    {
+        Console.WriteLine("Enter strings separated by commas:");
+        string input = Console.ReadLine()!;
+        string[] arr = input.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+
+        string[] newArr = GetShortStrings(arr);
+
+        Console.WriteLine("New array of strings:");
+        foreach (var item in newArr)
+        {
+            Console.WriteLine(item);
+        }
+    }
 }
+
+
 
